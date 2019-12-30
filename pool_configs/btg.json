@@ -1,50 +1,56 @@
 {
-    "enabled": false,
+    "enabled": true,
     "coin": "btg.json",
-    
-    "address": "",
-    "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
-    
-    "zAddress": "",
+
+    "address": "Ga8BLruYt2cdKuncm6QvWCJMkV5g9717w",
+    "_comment_address": "CHANGE THIS. a transparent address to send coinbase rewards to and to transfer to zAddress. In daemon, this address must with account label: znomp reward",
+
+    "zAddress": "Ga8BLruYt2cdKuncm6QvWCJMkV5g9717w",
     "_comment_zAddress": "Not used",
-    
-    "tAddress": "",
-    "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
-    
+
+    "tAddress": "Ga8BLruYt2cdKuncm6QvWCJMkV5g9717w",
+    "_comment_tAddress": "CHANGE THIS. transparent address used to send payments, make this a different address, otherwise payments will not send. In daemon, this address must with account label: znomp reward",
+
     "walletInterval": 5,
-    
+
+    "invalidAddress": "Ga8BLruYt2cdKuncm6vWCJMkV25g9717w",
+    "_comment_invalidAddress": "CHANGE THIS. if miner address is invalid, send reward to this address",
+
     "rewardRecipients": {
-        "": 1.0
+        "Ga8BLruYt2cdKuncm6QvWCJMkV5g9717w": 1.0
     },
-    
+
     "tlsOptions": {
         "enabled": false,
         "serverKey":"",
         "serverCert":"",
         "ca":""
     },
-    
+
     "paymentProcessing": {
         "minConf": 10,
         "enabled": true,
         "paymentMode": "prop",
         "_comment_paymentMode":"prop, pplnt",
-        "paymentInterval": 57,
+        "paymentInterval": 157,
         "_comment_paymentInterval": "Interval in seconds to check and perform payments.",
         "minimumPayment": 0.1,
         "maxBlocksPerPayment": 3,
         "daemon": {
+            
             "host": "127.0.0.1",
-            "port": 8332,
-            "user": "username",
-            "password": "password"
+            "port": 840,
+            "user": "btrpc",
+            "password": "btgesword"
         }
     },
+
+   
     
     "ports": {
-        "3857": {
+        "3858": {
             "tls":false,
-            "diff": 0.05,
+            "diff": 1,
             "varDiff": {
                 "minDiff": 0.04,
                 "maxDiff": 16,
@@ -54,23 +60,24 @@
             }
         }
     },
-    
+
     "daemons": [
                 {
+                
                 "host": "127.0.0.1",
-                "port": 8332,
-                "user": "username",
-                "password": "password"
+                "port": 840,
+                "user": "btgpc",
+                "password": "btgepasord"
                 }
                 ],
-    
+
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
         "port": 19333,
         "disableTransactions": true
     },
-    
+
     "mposMode": {
         "enabled": false,
         "host": "127.0.0.1",
@@ -81,5 +88,5 @@
         "checkPassword": true,
         "autoCreateWorker": false
     }
-    
+
 }
