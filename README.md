@@ -79,14 +79,15 @@ a good pool operator. For starters be sure to read:
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
+sudo apt-get install build-essential libsodium-dev libboost-system-dev
 sudo apt-get install build-essential libsodium-dev npm
 sudo npm install n -g
 sudo n 8.11.1
-git clone https://github.com/poolgold/z-nomp-bitcoin-gold.git z-nomp-bitcoin-gold
+git clone https://github.com/dacelee/z-nomp-bitcoin-gold
 cd z-nomp-bitcoin-gold
 npm update
 npm install
-```
+
 
 ##### Pool config
 Take a look at the example json file inside the `pool_configs` directory. Rename it to `zclassic.json` and change the
