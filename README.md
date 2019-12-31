@@ -81,13 +81,15 @@ Clone the repository and run `npm update` for all the dependencies to be install
 ```bash
 sudo apt-get install build-essential libsodium-dev libboost-system-dev
 sudo apt-get install build-essential libsodium-dev npm
+sudo apt-get install redis-server
+dpkg -l|grep redis
 sudo npm install n -g
 sudo n 8.11.1
 git clone https://github.com/dacelee/z-nomp-bitcoin-gold
 cd z-nomp-bitcoin-gold
 npm update
 npm install
-
+npm start
 
 ##### Pool config
 Take a look at the example json file inside the `pool_configs` directory. Rename it to `zclassic.json` and change the
